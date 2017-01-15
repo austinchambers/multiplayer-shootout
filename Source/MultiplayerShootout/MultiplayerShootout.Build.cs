@@ -15,12 +15,5 @@ public class MultiplayerShootout : ModuleRules
 		
 		// Uncomment if you are using online features
         PrivateDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "OnlineSubsystemUtils", "OnlineSubsystemNull" });
-        if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64))
-        {
-            if (UEBuildConfiguration.bCompileSteamOSS == true)
-            {
-                DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
-            }
-        }
 	}
 }
